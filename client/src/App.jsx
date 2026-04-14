@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="bg-bg text-text min-h-screen font-sans">
       {page === "landing" ? (
-        <LandingPage onEnter={() => setPage("dashboard")} />
+        <LandingPage onEnter={() => setPage("dashboard")} setPage={setPage} />
       ) : (
         <div className="flex">
           <Sidebar page={page} setPage={setPage} />

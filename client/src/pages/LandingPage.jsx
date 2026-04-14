@@ -1,7 +1,6 @@
-export default function LandingPage({ onEnter }) {
+export default function LandingPage({ onEnter, setPage }) {
   return (
     <div className="bg-bg text-text min-h-screen relative overflow-hidden">
-
       {/* NAVBAR */}
       <div className="fixed top-0 left-0 right-0 h-15 bg-[#0a0f0aee] backdrop-blur-md border-b border-border flex items-center justify-between px-12 z-50">
         <div className="text-green font-bold text-lg tracking-wide">
@@ -9,9 +8,24 @@ export default function LandingPage({ onEnter }) {
         </div>
 
         <div className="flex gap-8 text-sm text-text2">
-          <span className="hover:text-green cursor-pointer">Platform</span>
-          <span className="hover:text-green cursor-pointer">Verification</span>
-          <span className="hover:text-green cursor-pointer">Intelligence</span>
+          <span
+            className="hover:text-green cursor-pointer"
+            onClick={() => setPage("dashboard")}
+          >
+            Platform
+          </span>
+          <span
+            className="hover:text-green cursor-pointer"
+            onClick={() => setPage("verify")}
+          >
+            Verification
+          </span>
+          <span
+            className="hover:text-green cursor-pointer"
+            onClick={() => setPage("reports")}
+          >
+            Intelligence
+          </span>
         </div>
       </div>
 
@@ -26,10 +40,8 @@ export default function LandingPage({ onEnter }) {
 
       {/* HERO */}
       <div className="min-h-screen flex items-center justify-between px-20 pt-24 gap-12 relative z-10">
-
         {/* LEFT TEXT */}
         <div className="max-w-xl">
-          
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-green/10 border border-border2 px-4 py-1 rounded-full text-xs font-mono text-green tracking-widest mb-6">
             <div className="w-2 h-2 bg-green rounded-full animate-pulse"></div>
@@ -44,8 +56,9 @@ export default function LandingPage({ onEnter }) {
 
           {/* Subtitle */}
           <p className="text-text2 text-base leading-7 mb-10">
-            Tamper-proof, verifiable carbon emission tracking for modern organizations.
-            Leverage decentralized ledgers to ensure absolute environmental transparency.
+            Tamper-proof, verifiable carbon emission tracking for modern
+            organizations. Leverage decentralized ledgers to ensure absolute
+            environmental transparency.
           </p>
 
           {/* Buttons */}
@@ -69,12 +82,16 @@ export default function LandingPage({ onEnter }) {
           <div className="flex gap-10 mt-10">
             <div>
               <div className="text-green text-xl font-bold">1.2M Tons</div>
-              <div className="text-text3 text-xs mt-1">TOTAL OFFSET MANAGED</div>
+              <div className="text-text3 text-xs mt-1">
+                TOTAL OFFSET MANAGED
+              </div>
             </div>
 
             <div>
               <div className="text-green text-xl font-bold">99.9%</div>
-              <div className="text-text3 text-xs mt-1">VERIFICATION ACCURACY</div>
+              <div className="text-text3 text-xs mt-1">
+                VERIFICATION ACCURACY
+              </div>
             </div>
           </div>
         </div>
@@ -82,7 +99,6 @@ export default function LandingPage({ onEnter }) {
         {/* RIGHT DASHBOARD */}
         <div className="w-110">
           <div className="bg-card border border-border rounded-2xl p-5 shadow-2xl">
-
             {/* Header */}
             <div className="flex justify-between items-center mb-4">
               <div className="flex gap-2">
@@ -100,17 +116,12 @@ export default function LandingPage({ onEnter }) {
               CURRENT INTELLIGENCE
             </div>
 
-            <div className="text-4xl font-bold text-green">
-              842.04
-            </div>
+            <div className="text-4xl font-bold text-green">842.04</div>
 
-            <div className="text-xs text-green mt-1">
-              ▲ +12.5% vs baseline
-            </div>
+            <div className="text-xs text-green mt-1">▲ +12.5% vs baseline</div>
 
             {/* Rows */}
             <div className="mt-4 space-y-2">
-              
               <div className="bg-bg3 rounded-lg p-3 flex justify-between items-center">
                 <div>
                   <div className="text-[10px] text-text3 font-mono">
@@ -138,7 +149,6 @@ export default function LandingPage({ onEnter }) {
                   PENDING
                 </span>
               </div>
-
             </div>
           </div>
         </div>
@@ -151,11 +161,11 @@ export default function LandingPage({ onEnter }) {
         </h2>
 
         <p className="text-text2 text-center mb-12">
-          Institutional-grade security meets real-time environmental intelligence.
+          Institutional-grade security meets real-time environmental
+          intelligence.
         </p>
 
         <div className="grid grid-cols-3 gap-4">
-          
           <div className="bg-card2 border border-border rounded-xl p-6 col-span-2 row-span-2">
             <div className="text-2xl mb-3">🌍</div>
             <h3 className="text-lg font-semibold mb-2">Global Intelligence</h3>
@@ -179,7 +189,6 @@ export default function LandingPage({ onEnter }) {
           <div className="bg-card border border-border rounded-xl p-6">
             ⚡ Real-Time Sync
           </div>
-
         </div>
       </div>
 
